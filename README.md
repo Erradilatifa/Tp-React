@@ -30,15 +30,15 @@ npm start
 
 ### Réalisation de l'exercice 1 :
 
-J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en utilisant :  
-
-- Le hook `usePosts` avec `useState` et `useEffect` pour charger et filtrer les données.
+  J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en utilisant :  
   
-- Le composant `PostList` pour afficher les posts (titre + extrait).
+  - Le hook `usePosts` avec `useState` et `useEffect` pour charger et filtrer les données.
+    
+  - Le composant `PostList` pour afficher les posts (titre + extrait).
+    
+  - La recherche via `PostSearch`, qui interroge l'API avec `/posts/search?q={term}`.
   
-- La recherche via `PostSearch`, qui interroge l'API avec `/posts/search?q={term}`.
-
-- Gestion des états `loading` et `error` pour une meilleure expérience utilisateur.  
+  - Gestion des états `loading` et `error` pour une meilleure expérience utilisateur.  
 
 
 
@@ -58,15 +58,15 @@ J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en 
 - [ ] 2.3 Utiliser ces hooks dans l'application
 - [ ] 2.4 Documenter votre solution ici
 
-2.1 - J'ai créé le hook useDebounce qui utilise un délai de 500ms pour éviter d'appeler l'API à chaque frappe dans le champ de recherche. Il est utilisé dans le hook usePosts pour limiter les requêtes inutiles.
-
-2.2 - J'ai créé le hook useLocalStorage qui permet de sauvegarder une valeur dans le localStorage. Il est utilisé dans App.jsx pour mémoriser le mode de défilement choisi par l’utilisateur.
-
-2.3 - Les deux hooks sont utilisés dans l'application :
-
-useDebounce : dans usePosts.js, pour attendre que l’utilisateur ait fini de taper avant de déclencher la recherche.
-
-useLocalStorage : dans App.jsx, pour enregistrer la préférence de scroll (préparation à l'exercice 4) et dans ThemeContext.js (préparation exercice 3).
+  2.1 - J'ai créé le hook useDebounce qui utilise un délai de 500ms pour éviter d'appeler l'API à chaque frappe dans le champ de recherche. Il est utilisé dans le hook usePosts pour limiter les requêtes inutiles.
+  
+  2.2 - J'ai créé le hook useLocalStorage qui permet de sauvegarder une valeur dans le localStorage. Il est utilisé dans App.jsx pour mémoriser le mode de défilement choisi par l’utilisateur.
+  
+  2.3 - Les deux hooks sont utilisés dans l'application :
+  
+  useDebounce : dans usePosts.js, pour attendre que l’utilisateur ait fini de taper avant de déclencher la recherche.
+  
+  useLocalStorage : dans App.jsx, pour enregistrer la préférence de scroll (préparation à l'exercice 4) et dans ThemeContext.js (préparation exercice 3).
 
 
 ### Exercice 3 : Optimisation et Context
@@ -80,27 +80,27 @@ useLocalStorage : dans App.jsx, pour enregistrer la préférence de scroll (pré
 ##### J'ai implémenté la gestion du thème et optimisé les performances de l'application :
 ### ThemeContext :
 
-Création d'un contexte global pour gérer le thème clair/sombre
-
-Mise en place d'un Provider autour de l'application
-
-Export des fonctions utilitaires via useTheme()
+  Création d'un contexte global pour gérer le thème clair/sombre
+  
+  Mise en place d'un Provider autour de l'application
+  
+  Export des fonctions utilitaires via useTheme()
 
 ### ThemeToggle :
 
-Composant basique avec un switch UI
-
-Intégration fluide avec le contexte
-
-Mise à jour en temps réel de l'interface
+  Composant basique avec un switch UI
+  
+  Intégration fluide avec le contexte
+  
+  Mise à jour en temps réel de l'interface
 
 ### Optimisations :
 
-useCallback pour stabiliser les handlers (clic, recherche)
-
-useMemo pour les calculs coûteux (tags uniques)
-
-React.memo sur les composants principaux
+  useCallback pour stabiliser les handlers (clic, recherche)
+  
+  useMemo pour les calculs coûteux (tags uniques)
+  
+  React.memo sur les composants principaux
 
 ## Captures d'écran :
 ### Blog page avec le bouton ThemeToggle visible
@@ -123,52 +123,52 @@ React.memo sur les composants principaux
 - [ ] 4.4 Documenter votre solution ici
 
 ### ⚡ Chargement Infini
-    Technologie : useIntersectionObserver
+   Technologie : useIntersectionObserver
     
-    Fonctionnement :
+   Fonctionnement :
     
-    Détection automatique du bas de page
+  Détection automatique du bas de page
     
-    Chargement déclenché seulement si :
+   Chargement déclenché seulement si :
     
-    Scroll infini activé
+  Scroll infini activé
     
-    Posts disponibles (hasMore)
+   Posts disponibles (hasMore)
     
-    Pas de chargement en cours
+  Pas de chargement en cours
     
-    Alternative : Bouton "Voir plus" si désactivé
+  Alternative : Bouton "Voir plus" si désactivé 
 
 ### 📱 Détails des Posts
-Contenu :
-
-Titre complet + corps de l'article
-
-Système de réactions (likes)
-
-Tags cliquables (#hashtag)
-
-Bouton de fermeture
-
-Optimisation : React.memo pour performances
+  Contenu :
+  
+  Titre complet + corps de l'article
+  
+  Système de réactions (likes)
+  
+  Tags cliquables (#hashtag)
+  
+  Bouton de fermeture
+  
+  Optimisation : React.memo pour performances
 
 ### 🔍 Filtrage par Tags
-Interaction :
-
-Cliquez sur un tag pour filtrer
-
-Tag stocké dans selectedTag
-
-Bouton de réinitialisation
-
-Compatibilité : Fonctionne avec le scroll infini
+  Interaction :
+  
+  Cliquez sur un tag pour filtrer
+  
+  Tag stocké dans selectedTag
+  
+  Bouton de réinitialisation
+  
+  Compatibilité : Fonctionne avec le scroll infini
 
 ### ⚙️ Optimisations Clés
-useCallback : Stabilise les handlers d'événements
-
-useMemo : Calcule les tags uniques efficacement
-
-React.memo : Évite les rendus inutiles
+  useCallback : Stabilise les handlers d'événements
+  
+  useMemo : Calcule les tags uniques efficacement
+  
+  React.memo : Évite les rendus inutiles
 
 ## Captures d'écran :
 
