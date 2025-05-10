@@ -53,11 +53,9 @@ Pour chaque exercice :
 - [ ] 1.4 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 1 :_
-```
-Expliquez votre solution ici
-![Uploading screen1.png…]()
-
-```
+## Captures d'écran :
+### Capture de l'affichage des posts
+![screen1](https://github.com/user-attachments/assets/e6b7fdc1-879f-4889-88d2-1522ed60566f)
 
 ### Exercice 2 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
