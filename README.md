@@ -46,7 +46,7 @@ J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en 
 ### Capture de l'affichage des posts
 ![screen1](https://github.com/user-attachments/assets/e6b7fdc1-879f-4889-88d2-1522ed60566f)
 
-### Capture de la barre de recherche fonctionnelle
+### 🔍 Capture de la barre de recherche fonctionnelle
 ![screen2](https://github.com/user-attachments/assets/bec39c93-f371-4326-bdf8-d6549e1b8587)
 
 
@@ -65,9 +65,9 @@ J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en 
 2.3 - Les deux hooks sont utilisés dans l'application :
 
 useDebounce : dans usePosts.js, pour attendre que l’utilisateur ait fini de taper avant de déclencher la recherche.
+
 useLocalStorage : dans App.jsx, pour enregistrer la préférence de scroll (préparation à l'exercice 4) et dans ThemeContext.js (préparation exercice 3).
-Difficulté rencontrée :
-Le challenge principal a été de bien synchroniser useDebounce avec la logique de fetch. J'ai résolu cela avec un useEffect propre et bien isolé.
+
 
 ### Exercice 3 : Optimisation et Context
 #### Objectif : Gérer le thème global et optimiser les rendus
@@ -76,6 +76,31 @@ Le challenge principal a été de bien synchroniser useDebounce avec la logique 
 - [ ] 3.2 Implémenter le composant `ThemeToggle`
 - [ ] 3.3 Utiliser `useCallback` et `useMemo` pour optimiser les performances
 - [ ] 3.4 Documenter votre solution ici
+
+##### J'ai implémenté la gestion du thème et optimisé les performances de l'application :
+### ThemeContext :
+
+Création d'un contexte global pour gérer le thème clair/sombre
+
+Mise en place d'un Provider autour de l'application
+
+Export des fonctions utilitaires via useTheme()
+
+### ThemeToggle :
+
+Composant basique avec un switch UI
+
+Intégration fluide avec le contexte
+
+Mise à jour en temps réel de l'interface
+
+### Optimisations :
+
+useCallback pour stabiliser les handlers (clic, recherche)
+
+useMemo pour les calculs coûteux (tags uniques)
+
+React.memo sur les composants principaux
 
 ## Captures d'écran :
 ### Blog page avec le bouton ThemeToggle visible
@@ -96,6 +121,32 @@ Le challenge principal a été de bien synchroniser useDebounce avec la logique 
 - [ ] 4.2 Créer le composant `PostDetails` pour afficher les détails d'un post
 - [ ] 4.3 Ajouter la fonctionnalité de filtrage par tags
 - [ ] 4.4 Documenter votre solution ici
+
+### 4.1 Chargement Infini
+- Utilisation du hook `useIntersectionObserver`
+- Chargement automatique quand :
+  - Scroll activé
+  - Posts disponibles
+  - Pas de chargement en cours
+- Alternative avec bouton "Voir plus" si désactivé
+
+### 4.2 Détails des Posts
+- Affichage complet au clic :
+  - Titre + contenu
+  - Réactions (likes)
+  - Tags cliquables
+- Optimisé avec `React.memo`
+
+### 4.3 Filtres par Tags
+- Cliquez sur un tag pour filtrer
+- Stockage dans `selectedTag`
+- Réinitialisation facile
+- Compatible scroll infini
+
+### 4.4 Optimisations
+- `useCallback` : gestion des clics
+- `useMemo` : calcul des tags
+- `React.memo` : optimisation composants
 
 ## Captures d'écran :
 
