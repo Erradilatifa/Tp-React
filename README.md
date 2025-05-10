@@ -6,43 +6,19 @@ Ce TP a pour objectif de mettre en pratique l'utilisation des Hooks React (useSt
 
 1. Cloner le dépôt :
 ```bash
-git clone https://github.com/pr-daaif/tp-react-hooks-blog.git
-cd tp-react-hooks-blog
+git clone https://github.com/Erradilatifa/Tp-React.git        
+cd Tp-React
 ```
 
-2. Créer votre propre dépôt sur Github et changer le remote :
-```bash
-# Supprimer le remote origine
-git remote remove origin
-
-# Ajouter votre nouveau remote
-git remote add origin https://github.com/[votre-username]/tp-react-hooks-blog.git
-
-# Premier push
-git push -u origin main
-```
-
-3. Installer les dépendances :
+2. Installer les dépendances :
 ```bash
 npm install
 ```
 
-4. Lancer l'application :
+3. Lancer l'application :
 ```bash
 npm start
 ```
-
-## Instructions pour le TP
-
-Pour chaque exercice :
-1. Lisez attentivement l'énoncé
-2. Implémentez la solution
-3. Testez votre implémentation (pensez à faire des copies d'écran)
-4. Mettez à jour la section correspondante dans ce README avec :
-   - Une brève explication de votre solution
-   - Des captures d'écran montrant le fonctionnement
-   - Les difficultés rencontrées et comment vous les avez résolues
-5. Commitez vos changements avec un message descriptif
 
 ### Exercice 1 : État et Effets 
 #### Objectif : Implémenter l'affichage et la recherche de posts
@@ -51,6 +27,20 @@ Pour chaque exercice :
 - [ ] 1.2 Implémenter le composant `PostList` pour afficher les posts
 - [ ] 1.3 Ajouter la fonctionnalité de recherche par titre ou contenu dans `PostSearch`
 - [ ] 1.4 Documenter votre solution ici
+
+### Réalisation de l'exercice 1 :
+
+J'ai implémenté la récupération des posts depuis l'API **dummyjson.com** en utilisant :  
+
+- Le hook `usePosts` avec `useState` et `useEffect` pour charger et filtrer les données.
+  
+- Le composant `PostList` pour afficher les posts (titre + extrait).
+  
+- La recherche via `PostSearch`, qui interroge l'API avec `/posts/search?q={term}`.
+
+- Gestion des états `loading` et `error` pour une meilleure expérience utilisateur.  
+
+
 
 ## Captures d'écran :
 ### Capture de l'affichage des posts
