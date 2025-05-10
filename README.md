@@ -123,21 +123,21 @@ React.memo sur les composants principaux
 - [ ] 4.4 Documenter votre solution ici
 
 ### ⚡ Chargement Infini
-Technologie : useIntersectionObserver
-
-Fonctionnement :
-
-Détection automatique du bas de page
-
-Chargement déclenché seulement si :
-
-Scroll infini activé
-
-Posts disponibles (hasMore)
-
-Pas de chargement en cours
-
-Alternative : Bouton "Voir plus" si désactivé
+    Technologie : useIntersectionObserver
+    
+    Fonctionnement :
+    
+    Détection automatique du bas de page
+    
+    Chargement déclenché seulement si :
+    
+    Scroll infini activé
+    
+    Posts disponibles (hasMore)
+    
+    Pas de chargement en cours
+    
+    Alternative : Bouton "Voir plus" si désactivé
 
 ### 📱 Détails des Posts
 Contenu :
