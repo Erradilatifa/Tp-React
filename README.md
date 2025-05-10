@@ -52,10 +52,13 @@ Pour chaque exercice :
 - [ ] 1.3 Ajouter la fonctionnalité de recherche par titre ou contenu dans `PostSearch`
 - [ ] 1.4 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 1 :_
 ## Captures d'écran :
 ### Capture de l'affichage des posts
 ![screen1](https://github.com/user-attachments/assets/e6b7fdc1-879f-4889-88d2-1522ed60566f)
+
+### Capture de la barre de recherche fonctionnelle
+![screen2](https://github.com/user-attachments/assets/bec39c93-f371-4326-bdf8-d6549e1b8587)
+
 
 ### Exercice 2 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
@@ -65,11 +68,16 @@ _Votre réponse pour l'exercice 1 :_
 - [ ] 2.3 Utiliser ces hooks dans l'application
 - [ ] 2.4 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 2 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+2.1 - J'ai créé le hook useDebounce qui utilise un délai de 500ms pour éviter d'appeler l'API à chaque frappe dans le champ de recherche. Il est utilisé dans le hook usePosts pour limiter les requêtes inutiles.
+
+2.2 - J'ai créé le hook useLocalStorage qui permet de sauvegarder une valeur dans le localStorage. Il est utilisé dans App.jsx pour mémoriser le mode de défilement choisi par l’utilisateur.
+
+2.3 - Les deux hooks sont utilisés dans l'application :
+
+useDebounce : dans usePosts.js, pour attendre que l’utilisateur ait fini de taper avant de déclencher la recherche.
+useLocalStorage : dans App.jsx, pour enregistrer la préférence de scroll (préparation à l'exercice 4) et dans ThemeContext.js (préparation exercice 3).
+Difficulté rencontrée :
+Le challenge principal a été de bien synchroniser useDebounce avec la logique de fetch. J'ai résolu cela avec un useEffect propre et bien isolé.
 
 ### Exercice 3 : Optimisation et Context
 #### Objectif : Gérer le thème global et optimiser les rendus
@@ -79,11 +87,17 @@ Expliquez votre solution ici
 - [ ] 3.3 Utiliser `useCallback` et `useMemo` pour optimiser les performances
 - [ ] 3.4 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 3 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+## Captures d'écran :
+### Blog page avec le bouton ThemeToggle visible
+![sceen3](https://github.com/user-attachments/assets/0af3abab-b25d-4676-a9c3-7aa4524cefde)
+
+### Blog page en mode sombre (dark mode)
+![sreen4](https://github.com/user-attachments/assets/80b71664-9f54-46d2-abff-4b7e7e2e407a)
+
+### Champ de recherche optimisé (déclenche la recherche avec un debounce)
+
+
+
 
 ### Exercice 4 : Fonctionnalités avancées
 #### Objectif : Ajouter des fonctionnalités de chargement et détail
@@ -93,11 +107,26 @@ Expliquez votre solution ici
 - [ ] 4.3 Ajouter la fonctionnalité de filtrage par tags
 - [ ] 4.4 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 4 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+## Captures d'écran :
+
+### Chargement infini des posts (scroll jusqu’en bas)
+![sceen6](https://github.com/user-attachments/assets/28f93091-9b0f-4639-b79e-c49162cb57e6)
+
+### Détails d’un post sélectionné avec réactions et tags
+![sreenn7](https://github.com/user-attachments/assets/2cb60317-c051-45e3-a3d1-f656ef6925ee)
+
+### Filtrage des posts par tag sélectionné (#tech, #code...)
+![screen8](https://github.com/user-attachments/assets/bcad1a61-9c2e-4b67-9e8f-2b1cd28a55b5)
+
+## ✅  Résultat final
+Une application fluide avec chargement progressif, navigation détaillée, et filtrage dynamique par tags
+Une expérience optimisée côté utilisateur avec un code modulaire et réutilisable
+![screen9](https://github.com/user-attachments/assets/e89d4a7b-8bed-4ad6-8dfb-8103f3f1aa56)
+
+
+
+
+
 
 ## Structure détaillée du projet
 
