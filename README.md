@@ -55,7 +55,8 @@ Pour chaque exercice :
 _Votre réponse pour l'exercice 1 :_
 ```
 Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+![Uploading screen1.png…]()
+
 ```
 
 ### Exercice 2 : Hooks Personnalisés
