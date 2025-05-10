@@ -150,53 +150,23 @@ React.memo sur les composants principaux
 
 ## Captures d'écran :
 
-### Chargement infini des posts (scroll jusqu’en bas)
+### ⚡ Chargement infini des posts (scroll jusqu’en bas)
 ![sceen6](https://github.com/user-attachments/assets/28f93091-9b0f-4639-b79e-c49162cb57e6)
 
-### Détails d’un post sélectionné avec réactions et tags
+### 📱 Détails d’un post sélectionné avec réactions et tags
 ![sreenn7](https://github.com/user-attachments/assets/2cb60317-c051-45e3-a3d1-f656ef6925ee)
 
-### Filtrage des posts par tag sélectionné (#tech, #code...)
+### 🔍 Filtrage des posts par tag sélectionné (#tech, #code...)
 ![screen8](https://github.com/user-attachments/assets/bcad1a61-9c2e-4b67-9e8f-2b1cd28a55b5)
 
 ## ✅  Résultat final
 Une application fluide avec chargement progressif, navigation détaillée, et filtrage dynamique par tags
 
 Une expérience optimisée côté utilisateur avec un code modulaire et réutilisable
+
 ![screen9](https://github.com/user-attachments/assets/e89d4a7b-8bed-4ad6-8dfb-8103f3f1aa56)
 
 
-
-
-
-
-## Structure détaillée du projet
-
-```
-📁 ./
-├─ 📄 README.md
-├─ 📄 package.json
-├─ 📁 public/
-│  └─ 📄 index.html
-└─ 📁 src/
-   ├─ 📄 App.js               # Composant principal de l'application
-   ├─ 📄 App.css              # Styles CSS de l'application
-   ├─ 📁 components/
-   │  ├─ 📄 PostList.js       # Liste des posts
-   │  ├─ 📄 PostSearch.js     # Barre de recherche
-   │  ├─ 📄 PostDetails.js    # Détails d'un post
-   │  ├─ 📄 ThemeToggle.js    # Bouton pour changer de thème
-   │  └─ 📄 LoadingSpinner.js # Indicateur de chargement
-   ├─ 📁 hooks/
-   │  ├─ 📄 usePosts.js       # Hook pour gérer les posts
-   │  ├─ 📄 useDebounce.js    # Hook pour débouncer les valeurs
-   │  ├─ 📄 useLocalStorage.js # Hook pour gérer le localStorage
-   │  └─ 📄 useIntersectionObserver.js # Hook pour le chargement infini
-   ├─ 📁 context/
-   │  └─ 📄 ThemeContext.js   # Contexte pour le thème
-   ├─ 📄 index.css
-   └─ 📄 index.js
-```
 
 ## Ressources utiles
 
