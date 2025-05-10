@@ -120,6 +120,7 @@ Le challenge principal a été de bien synchroniser useDebounce avec la logique 
 
 ## ✅  Résultat final
 Une application fluide avec chargement progressif, navigation détaillée, et filtrage dynamique par tags
+
 Une expérience optimisée côté utilisateur avec un code modulaire et réutilisable
 ![screen9](https://github.com/user-attachments/assets/e89d4a7b-8bed-4ad6-8dfb-8103f3f1aa56)
 
