@@ -122,31 +122,53 @@ React.memo sur les composants principaux
 - [ ] 4.3 Ajouter la fonctionnalité de filtrage par tags
 - [ ] 4.4 Documenter votre solution ici
 
-### 4.1 Chargement Infini
-- Utilisation du hook `useIntersectionObserver`
-- Chargement automatique quand :
-  - Scroll activé
-  - Posts disponibles
-  - Pas de chargement en cours
-- Alternative avec bouton "Voir plus" si désactivé
+### ⚡ Chargement Infini
+Technologie : useIntersectionObserver
 
-### 4.2 Détails des Posts
-- Affichage complet au clic :
-  - Titre + contenu
-  - Réactions (likes)
-  - Tags cliquables
-- Optimisé avec `React.memo`
+Fonctionnement :
 
-### 4.3 Filtres par Tags
-- Cliquez sur un tag pour filtrer
-- Stockage dans `selectedTag`
-- Réinitialisation facile
-- Compatible scroll infini
+Détection automatique du bas de page
 
-### 4.4 Optimisations
-- `useCallback` : gestion des clics
-- `useMemo` : calcul des tags
-- `React.memo` : optimisation composants
+Chargement déclenché seulement si :
+
+Scroll infini activé
+
+Posts disponibles (hasMore)
+
+Pas de chargement en cours
+
+Alternative : Bouton "Voir plus" si désactivé
+
+### 📱 Détails des Posts
+Contenu :
+
+Titre complet + corps de l'article
+
+Système de réactions (likes)
+
+Tags cliquables (#hashtag)
+
+Bouton de fermeture
+
+Optimisation : React.memo pour performances
+
+### 🔍 Filtrage par Tags
+Interaction :
+
+Cliquez sur un tag pour filtrer
+
+Tag stocké dans selectedTag
+
+Bouton de réinitialisation
+
+Compatibilité : Fonctionne avec le scroll infini
+
+### ⚙️ Optimisations Clés
+useCallback : Stabilise les handlers d'événements
+
+useMemo : Calcule les tags uniques efficacement
+
+React.memo : Évite les rendus inutiles
 
 ## Captures d'écran :
 
