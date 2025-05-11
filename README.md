@@ -23,10 +23,10 @@ npm start
 ### Exercice 1 : État et Effets 
 #### Objectif : Implémenter l'affichage et la recherche de posts
 
-- [ ] 1.1 Compléter le hook `usePosts` pour récupérer les posts depuis l'API dummyjson.com
-- [ ] 1.2 Implémenter le composant `PostList` pour afficher les posts
-- [ ] 1.3 Ajouter la fonctionnalité de recherche par titre ou contenu dans `PostSearch`
-- [ ] 1.4 Documenter votre solution ici
+- [X] 1.1 Compléter le hook `usePosts` pour récupérer les posts depuis l'API dummyjson.com
+- [X] 1.2 Implémenter le composant `PostList` pour afficher les posts
+- [X] 1.3 Ajouter la fonctionnalité de recherche par titre ou contenu dans `PostSearch`
+- [X] 1.4 Documenter votre solution ici
 
 ### Réalisation de l'exercice 1 :
 
@@ -53,10 +53,10 @@ npm start
 ### Exercice 2 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
 
-- [ ] 2.1 Créer le hook `useDebounce` pour optimiser la recherche
-- [ ] 2.2 Créer le hook `useLocalStorage` pour persister les préférences utilisateur
-- [ ] 2.3 Utiliser ces hooks dans l'application
-- [ ] 2.4 Documenter votre solution ici
+- [X] 2.1 Créer le hook `useDebounce` pour optimiser la recherche
+- [X] 2.2 Créer le hook `useLocalStorage` pour persister les préférences utilisateur
+- [X] 2.3 Utiliser ces hooks dans l'application
+- [X] 2.4 Documenter votre solution ici
 
   2.1 - J'ai créé le hook useDebounce qui utilise un délai de 500ms pour éviter d'appeler l'API à chaque frappe dans le champ de recherche. Il est utilisé dans le hook usePosts pour limiter les requêtes inutiles.
   
@@ -72,10 +72,10 @@ npm start
 ### Exercice 3 : Optimisation et Context
 #### Objectif : Gérer le thème global et optimiser les rendus
 
-- [ ] 3.1 Créer le `ThemeContext` pour gérer le thème clair/sombre
-- [ ] 3.2 Implémenter le composant `ThemeToggle`
-- [ ] 3.3 Utiliser `useCallback` et `useMemo` pour optimiser les performances
-- [ ] 3.4 Documenter votre solution ici
+- [X] 3.1 Créer le `ThemeContext` pour gérer le thème clair/sombre
+- [X] 3.2 Implémenter le composant `ThemeToggle`
+- [X] 3.3 Utiliser `useCallback` et `useMemo` pour optimiser les performances
+- [X] 3.4 Documenter votre solution ici
 
 ##### J'ai implémenté la gestion du thème et optimisé les performances de l'application :
 ### ThemeContext :
@@ -117,10 +117,10 @@ npm start
 ### Exercice 4 : Fonctionnalités avancées
 #### Objectif : Ajouter des fonctionnalités de chargement et détail
 
-- [ ] 4.1 Implémenter le chargement infini des posts avec `useIntersectionObserver`
-- [ ] 4.2 Créer le composant `PostDetails` pour afficher les détails d'un post
-- [ ] 4.3 Ajouter la fonctionnalité de filtrage par tags
-- [ ] 4.4 Documenter votre solution ici
+- [X] 4.1 Implémenter le chargement infini des posts avec `useIntersectionObserver`
+- [X] 4.2 Créer le composant `PostDetails` pour afficher les détails d'un post
+- [X] 4.3 Ajouter la fonctionnalité de filtrage par tags
+- [X] 4.4 Documenter votre solution ici
 
 ### ⚡ Chargement Infini
    Technologie : useIntersectionObserver
